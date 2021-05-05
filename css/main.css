@@ -1,0 +1,659 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+
+body {position: relative; margin:0 auto;
+    background-color: rgba(224, 194, 241, 0.2);
+    transition:.5s;
+}
+
+
+.fixed a{
+    top: 5%;
+    left: 3%;
+
+    position: fixed;
+    z-index: 999;
+}
+.date {
+    bottom: 5%; right:3%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: fixed;
+}
+
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(224, 194, 241, 0.2);
+    display: flex;
+    position: relative;
+
+    transform-style: preserve-3d
+}
+
+.m_img {
+    position: relative;
+    width:60%;
+    margin:5% auto;
+}
+
+.main img {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:80%;
+    padding-top:5%;
+
+}
+
+.main h1 {
+    position: absolute;
+    font-size: 15em;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, -250);
+    transform: rotateX(0deg);
+
+    position: absolute;
+    text-align: center;
+    top:25%;
+
+    animation: hello 2s forwards;
+}
+
+@keyframes hello {
+    0% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, -250);
+    }
+
+    15% {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    25% {
+        transform: matrix(1, 0, 0, 1, 0, -150);
+    }
+
+    40% {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    50% {
+        transform: matrix(1, 0, 0, 1, 0, -50);
+    }
+
+    90% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 200) rotateX(80deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: matrix(1, 0, 0, 1, 300, 200) rotateX(90deg);
+    }
+}
+
+/* About Me About Me About Me About Me */
+.about {
+    width: 60%;
+    margin: 0 auto;
+    height:100vh;
+}
+
+.about h1 {
+    font-size: 5em;
+    padding:5% 0;
+}
+
+/* profile */
+.profile {
+    display: flex;
+}
+
+.profile .yoon {
+    margin: 0;
+    width:40%;
+}
+
+.yoon img {
+    width: 80%;
+    margin: 0 10% 0 10%  ;
+}
+
+.yoon p {
+    font-size: 2em;
+    text-align: center;
+    margin-top:6%;
+}
+
+.a_e {
+    display: flex;
+    flex-direction: column;
+
+    width:60%;
+    padding-left:10%;
+}
+
+.a_e h2 {
+    font-size: 2em;
+}
+.a_e .abo, .edu {
+    margin: 0 0 8%;
+}
+.a_e .abo h2, .edu h2 {
+    margin: 0 0 3%;
+}
+
+.abo figure {
+    white-space: pre-line;
+    line-height:2;
+}
+
+
+.edu p {
+    margin: 0 auto 1%;
+    white-space: pre-line;
+    word-break: normal;
+}
+.edu span:nth-of-type(odd) {
+    margin:0 5% 2% 0;
+    width:5%;
+    display: inline-block;
+}
+/* .edu span:nth-of-type(even) {
+    margin: 0 0 0 4%;
+} */
+
+/* profile */
+/* About Me About Me About Me About Me */
+
+
+/* detail detail detail detail detail */
+.detail {
+    display: flex;
+    margin: 3% 0 0 0;
+}
+
+.person {
+    width:40%;
+    box-sizing: border-box;
+/*     margin: 10% 10% 0 0%; */
+}
+.person li {
+    margin-bottom: 9%;
+}
+.person li span {
+    margin: 0 0 10% 10%;
+}
+
+.person img {
+    width: 5%;
+}
+
+/* skill */
+.skill {
+    width: 60%;
+    box-sizing: border-box;
+
+    padding-left:10%;
+}
+.skill h2 {
+    font-size: 2em;
+    margin:0 0 3% 0;
+}
+
+.coding {
+    display: flex;
+    flex-wrap: wrap;
+}
+.coding div {
+    margin:0 0 4% 0;
+}
+
+
+.html {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.html span {
+    display:table-cell;
+}
+.html span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.html span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.html i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: h_percent 1s forwards;
+}
+@keyframes h_percent {
+    100% {
+        left:100%;
+    }
+}
+
+/* animation */
+.css {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.css span {
+    display:table-cell;
+}
+.css span:last-of-type{
+    position:relative;
+    width:78%;
+}
+.css span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.css i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: h_percent 1s forwards;
+}
+@keyframes h_percent {
+    100% {
+        left:80%;
+    }
+}
+
+.coding div:nth-of-type(odd) {
+    margin-right: 2%;
+}
+
+.java {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.java span {
+    display:table-cell;
+}
+.java span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.java span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.java i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: js_percent 1s forwards;
+}
+@keyframes js_percent {
+    100% {
+        left:60%;
+    }
+}
+
+.jquery {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.jquery span {
+    display:table-cell;
+}
+.jquery span:last-of-type{
+    position:relative;
+    width:78%;
+}
+.jquery span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.jquery i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: js_percent 1s forwards;
+}
+@keyframes js_percent {
+    100% {
+        left:60%;
+    }
+}
+
+.photo {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.photo span {
+    display:table-cell;
+}
+.photo span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.photo span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.photo i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: ph_percent 1s forwards;
+}
+@keyframes ph_percent {
+    100% {
+        left:40%;
+    }
+}
+.ill {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.ill span {
+    display:table-cell;
+}
+.ill span:last-of-type{
+    position:relative;
+    width:78%;
+}
+.ill span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.ill i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: ph_percent 1s forwards;
+}
+@keyframes ph_percent {
+    100% {
+        left:40%;
+    }
+}
+
+.ajax {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.ajax span {
+    display:table-cell;
+}
+.ajax span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.ajax span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.ajax i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: a_percent 1s forwards;
+}
+@keyframes a_percent {
+    100% {
+        left:10%;
+    }
+}
+.webpack {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.webpack span {
+    display:table-cell;
+}
+.webpack span:last-of-type{
+    position:relative;
+    width:78%;
+}
+.webpack span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.webpack i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: a_percent 1s forwards;
+}
+@keyframes a_percent {
+    100% {
+        left:10%;
+    }
+}
+.react {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.react span {
+    display:table-cell;
+}
+.react span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.react span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.react i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: a_percent 1s forwards;
+}
+@keyframes a_percent {
+    100% {
+        left:10%;
+    }
+}
+.php {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.php span {
+    display:table-cell;
+}
+.php span:last-of-type{
+    position:relative;
+    width:78%;
+}
+.php span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.php i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: a_percent 1s forwards;
+}
+@keyframes a_percent {
+    100% {
+        left:10%;
+    }
+}
+.sql {
+    position: relative;
+    width:45%;
+    display:table;
+}
+.sql span {
+    display:table-cell;
+}
+.sql span:last-of-type{
+    position:relative;
+    width:75%;
+}
+.sql span:last-of-type:after{
+    content:'';
+    width:100%; height: 1px;
+    background-color: #000;
+    position:absolute; left:0; top:50%;
+}
+.sql i {
+    position:absolute; left:0; top:calc(50% - 2px);
+    border-radius: 100%;
+    background-color: black;
+    width: 4px; height: 4px;
+    animation: a_percent 1s forwards;
+}
+@keyframes a_percent {
+    100% {
+        left:10%;
+    }
+}
+/* .photo{width:40%;} */
+/* .ill{width:40%;} */
+/* .ajax{width:40%;}
+.webpack{width:40%;} */
+/* .react{width:40%;}
+.php{width:40%;} */
+/* .sql{width:40%;} */
+/* animation */
+
+
+/* detail detail detail detail detail */
+
+
+/* work work work work work work work */
+.work_bg {
+    background-color: rgba(224, 194, 241, 0.2);
+    height:100vh;
+    position: relative;
+}
+
+.work {
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.work h1 {
+    font-size: 5em;
+    padding:5% 0;
+}
+
+.w_img {
+    display: flex;
+}
+
+.w_img img {
+    width: 30%;
+    margin: 0 10% 20% 10%;
+}
+
+/* work work work work work work work */
+
+
+/* project project project project project */
+.project1 {
+    display: none;
+}
+
+.project1.active {
+    display: block;
+    width: 100%;
+    white-space: pre-line;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    position: absolute;
+    height:100vh;
+}
+
+.project1.active .p_1 {
+    background-color: white;
+    margin: 0 auto;
+    width:60%;
+}
+.project1.active .p_1 figure {
+    margin:0 auto;
+}
+
+
+
+.pro_1 {position: relative; margin:0 0 20% 0;}
+
+.x {
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.x::after {
+    content:'';
+    transform: rotate(90deg);
+    /* left: calc(50% - 1px); */
+    left:-1px;
+}
+
+.x, .x::after {
+    right:10%;
+    background-color: white;
+    width:30px; height:3px;
+    position: absolute;
+}
+
+
+.sijang{width:60%; height:28vw;position:relative; margin:4% auto 0;}
+.sijang img{width:100%;position:absolute;left:0;top:0;}
+
+
+.p_1 h1{text-align: center;}
+.plan {
+    width:60%;
+    margin:0 auto;
+}
+
+/* project project project project project */
